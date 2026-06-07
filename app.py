@@ -9,6 +9,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
 
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -88,4 +90,4 @@ def analyze():
     )
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
