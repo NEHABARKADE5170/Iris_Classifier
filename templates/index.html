@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Flower Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="flower">ִֶָ🌸˚˖𓍢ִ໋🌷͙֒✧🩷˚⋆</div>
+        <h1>Iris Flower Classifier</h1>
+        <p>Upload your iris dataset and get instant species analysis with ML models!</p>
+
+        <form id="uploadForm" action="/analyze" method="POST" enctype="multipart/form-data">
+            <div class="upload-area" id="dropZone">
+                <div class="upload-icon">📂</div>
+                <p id="uploadText">Click or Drag & Drop CSV file here</p>
+            </div>
+            <input type="file" id="file" name="dataset" accept=".csv">
+            <div class="file-name" id="fileName">No file selected</div>
+            <button type="submit" class="btn">🔍 Analyze Dataset</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
